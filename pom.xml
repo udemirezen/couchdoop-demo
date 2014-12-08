@@ -10,6 +10,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <jackson.version>2.4.4</jackson.version>
     <couchdoop.version>1.7.2</couchdoop.version>
     <hadoop.version>2.3.0-cdh5.0.2</hadoop.version>
     <junit.version>4.11</junit.version>
@@ -32,7 +34,7 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.4.4</version>
+      <version>${jackson.version}</version>
     </dependency>
 
     <dependency>
