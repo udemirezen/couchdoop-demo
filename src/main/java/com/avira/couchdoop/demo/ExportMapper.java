@@ -12,6 +12,8 @@ import java.util.ArrayList;
 
 public class ExportMapper  extends Mapper<LongWritable, Text, String, CouchbaseAction> {
 
+
+    private static final String KEY_PREFIX = "rec::";
     private static final String DELIMITER = "\t";
     private static final String SECONDARY_DELIMITER = ";";
 
@@ -35,7 +37,7 @@ public class ExportMapper  extends Mapper<LongWritable, Text, String, CouchbaseA
 
         CouchbaseAction action = new CouchbaseAction(CouchbaseOperation.SET, JACKSON.writeValueAsString(rec));
 
-        context.write(documentKey, action);
+        context.write(KEY_PREFIX + documentKey, action);
     }
 
 }
