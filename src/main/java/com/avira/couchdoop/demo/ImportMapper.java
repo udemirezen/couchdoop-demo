@@ -2,7 +2,6 @@ package com.avira.couchdoop.demo;
 
 import com.couchbase.client.protocol.views.ViewRow;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
@@ -17,7 +16,7 @@ public class ImportMapper extends Mapper<Text, ViewRow, Text, Text> {
   private final Text OUTPUT_KEY = new Text();
   private final Text OUTPUT_VALUE = new Text();
 
-  private final static String SEPARATOR = ",";
+  private final static String DELIMITER = ",";
 
   private final static ObjectMapper JACKSON = new ObjectMapper();
 
@@ -50,7 +49,7 @@ public class ImportMapper extends Mapper<Text, ViewRow, Text, Text> {
     STRING_BUILDER.setLength(0);
     for (Session.Article article : session.getArticles()) {
       STRING_BUILDER.append(article.getName());
-      STRING_BUILDER.append(SEPARATOR);
+      STRING_BUILDER.append(DELIMITER);
     }
     STRING_BUILDER.setLength(STRING_BUILDER.length() - 1);
     String articleNames = STRING_BUILDER.toString();
