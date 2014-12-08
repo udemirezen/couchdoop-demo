@@ -5,8 +5,6 @@ import java.util.List;
 
 public class Recommendation {
 
-    private String userId;
-
     private List<RecommendedItem> articles = new ArrayList<>();
 
     public Recommendation() {
@@ -25,11 +23,4 @@ public class Recommendation {
         this.articles = articles;
     }
 
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
 }
