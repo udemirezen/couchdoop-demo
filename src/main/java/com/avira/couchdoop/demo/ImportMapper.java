@@ -13,8 +13,11 @@ import java.io.IOException;
  */
 public class ImportMapper extends Mapper<Text, ViewRow, Text, Text> {
 
+  private final StringBuilder STRING_BUILDER = new StringBuilder();
   private final Text OUTPUT_KEY = new Text();
   private final Text OUTPUT_VALUE = new Text();
+
+  private final static String SEPARATOR = ",";
 
   private final static ObjectMapper JACKSON = new ObjectMapper();
 
@@ -44,7 +47,13 @@ public class ImportMapper extends Mapper<Text, ViewRow, Text, Text> {
     }
 
     // Extract article names from the JSON document.
-    String articleNames = StringUtils.join(session.getArticles(), ",");
+    STRING_BUILDER.setLength(0);
+    for (Session.Article article : session.getArticles()) {
+      STRING_BUILDER.append(article.getName());
+      STRING_BUILDER.append(SEPARATOR);
+    }
+    STRING_BUILDER.setLength(STRING_BUILDER.length() - 1);
+    String articleNames = STRING_BUILDER.toString();
 
     // Write output.
     OUTPUT_KEY.set(userId);
