@@ -46,13 +46,13 @@ public class ImportDriver extends Configured implements Tool {
     job.setInputFormatClass(CouchbaseViewInputFormat.class);
 
     // Mapper
-//    job.setMapperClass(Mapper.class); // TODO
+    job.setMapperClass(ImportMapper.class);
 
     // Reducer
     job.setNumReduceTasks(0);
 
     // Output
-    job.setOutputKeyClass(NullWritable.class);
+    job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(Text.class);
     FileOutputFormat.setOutputPath(job, new Path(output));
 
