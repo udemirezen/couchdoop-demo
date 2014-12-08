@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+  <property>
+    <name>couchbase.urls</name>
+    <value>http://couch.example.com:8091/pools</value>
+  </property>
+  <property>
+    <name>couchbase.bucket</name>
+    <value>users</value>
+  </property>
+  <property>
+    <name>couchbase.password</name>
+    <value>secret</value>
+  </property>
+  <property>
+    <name>couchbase.designdoc.name</name>
+    <value>sessions</value>
+  </property>
+  <property>
+    <name>couchbase.view.name</name>
+    <value>by_date</value>
+  </property>
+  <property>
+    <name>couchbase.view.keys</name>
+    <value>["20141201", ((0-3))]</value>
+  </property>
+</configuration>
