@@ -3,7 +3,6 @@ package com.avira.couchdoop.demo;
 import com.avira.couchdoop.imp.CouchbaseViewInputFormat;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
@@ -55,6 +54,10 @@ public class ImportDriver extends Configured implements Tool {
     job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(Text.class);
     FileOutputFormat.setOutputPath(job, new Path(output));
+
+    if (!job.waitForCompletion(true)) {
+      return 2;
+    }
 
     return 0;
   }

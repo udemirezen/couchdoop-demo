@@ -57,6 +57,10 @@ public class ExportDriver extends Configured implements Tool {
         job.setOutputValueClass(CouchbaseAction.class);
         job.setOutputFormatClass(CouchbaseOutputFormat.class);
 
+        if (!job.waitForCompletion(true)) {
+            return 2;
+        }
+
         return 0;
     }
 }
