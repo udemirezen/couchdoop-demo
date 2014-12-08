@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class ExportMapper  extends Mapper<LongWritable, Text, String, CouchbaseAction> {
 
     private static final String DELIMITER = "\t";
-    private static final String SECONDARY_DELIMITER = "\t";
+    private static final String SECONDARY_DELIMITER = ";";
 
     private static final ObjectMapper JACKSON = new ObjectMapper();
 
