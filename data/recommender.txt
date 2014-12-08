@@ -1,0 +1,2 @@
+johnny		enterprise-security-startup;0.92	the-internet-is-burning;0.86
+tom			hadoop-for-dummies;0.91	spark-101;0.90	hive-on-spark;0.86	linux-essentials;0.72
