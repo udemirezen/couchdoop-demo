@@ -13,7 +13,7 @@ HDFS need to be exported to Couchbase where the website can use them.
 
 The project contains two Hadoop MapReduce drivers:
 
-1. `com.avira.couchdoop.demo.ImportDriver`
+1. [`com.avira.couchdoop.demo.ImportDriver`](/src/main/java/com/avira/couchdoop/demo/ImportDriver.java)
   - Imports JSON session documents from Couchbase, reformats them into a
 	delimited text format and writes them in HDFS in a user specified path. It
 	is assumed that the recommender expects text files where on each line there
@@ -22,7 +22,7 @@ The project contains two Hadoop MapReduce drivers:
 	sample file to see how Couchbase session documents look like and
 	["data/imported_sessions.txt"](/data/imported_sessions.txt) to see how the
 	output of the Hadoop job triggered by this driver.
-2. `com.avira.couchdoop.demo.ExportDriver`
+2. [`com.avira.couchdoop.demo.ExportDriver`](/src/main/java/com/avira/couchdoop/demo/ImportDriver.java)
   - Exports the recommendations computed by the recommender to Couchbase. It is
 	assumed that the recommender outputs delimited text files where on each
 	line there is the user ID followed by tab and a tab separated list of
