@@ -9,7 +9,7 @@ import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
 /**
- * Very simple driver for a Couchdoop export
+ * Very simple driver for a Couchdoop export.
  */
 public class ExportDriver extends Configured implements Tool {
 

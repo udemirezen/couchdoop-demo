@@ -8,7 +8,9 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 
 /**
- * TODO
+ * Mapper which receives JSON session documents from Couchbase and reformats
+ * them as delimited HDFS text files in order to be used by a recommending
+ * system.
  */
 public class ImportMapper extends Mapper<Text, ViewRow, Text, Text> {
 

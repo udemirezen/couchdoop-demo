@@ -1,5 +1,8 @@
 package com.avira.couchdoop.demo;
 
+/**
+ * JavaBean used by Jackson library to generate JSON recommendation documents.
+ */
 public class RecommendedItem {
 
     private String name;

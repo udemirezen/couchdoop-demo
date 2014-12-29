@@ -10,7 +10,13 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ExportMapper  extends Mapper<LongWritable, Text, String, CouchbaseAction> {
+/**
+ * Mapper which reads a delimited text file with recommendations computed by a
+ * recommending system and reformats them to be published in Couchbase as JSON
+ * documents.
+ */
+public class ExportMapper
+        extends Mapper<LongWritable, Text, String, CouchbaseAction> {
 
 
     private static final String KEY_PREFIX = "rec::";

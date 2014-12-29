@@ -10,7 +10,7 @@ import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
 /**
- * TODO Document!
+ * Very simple driver for a Couchdoop import.
  */
 public class ImportDriver extends Configured implements Tool {
 

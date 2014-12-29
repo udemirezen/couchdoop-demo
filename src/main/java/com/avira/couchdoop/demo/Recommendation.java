@@ -3,6 +3,9 @@ package com.avira.couchdoop.demo;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * JavaBean used by Jackson library to generate JSON recommendation documents.
+ */
 public class Recommendation {
 
     private List<RecommendedItem> articles = new ArrayList<>();
