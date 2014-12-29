@@ -35,7 +35,7 @@ The project contains two Hadoop MapReduce drivers:
 	["data/recommendations.json"](/data/recommendations.json) the see how the
 	output from Couchbase is formatted.
 
-Check the source code to see how Couchdoop library works.
+Check the source code to see how the Couchdoop library works.
 
 This projects only shows how to import and export data from Couchbase and how
 to reformat it. The recommendation algorithm is not implemented since is it out
